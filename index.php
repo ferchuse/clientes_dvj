@@ -1,3 +1,3 @@
 <?php
-	header("location:ventas/ventas_nueva.php");
+	include("login/login_success.php);
 ?>
