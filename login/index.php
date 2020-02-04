@@ -50,34 +50,12 @@
 								<img class=" img-responsive" src="../img/logo.png">
 							</div>
 							
-							<?php 
-								if(isset($count) && $count != 1){
-								?>
-								<div class="alert alert-danger">Usuario y/o Contraseña inválidos</div>
-								<?php
-								}
-							?>
+							
 							<hr>
 							<div class="form-group">
 								
-								<select id="id_usuarios" name="id_usuarios" required class="form-control">
-									<option value="">Elige un usuario</option>
-									<?php
-										
-										$q_select="SELECT * FROM usuarios ORDER BY nombre_usuarios ";
-										$result_select= mysqli_query($link, $q_select)or die("Error en:$q_select".mysqli_error($link));
-										
-										while($row= mysqli_fetch_assoc($result_select)){
-											$id= $row["id_usuarios"];
-											$value = $row["nombre_usuarios"];
-										?>
-										<option value="<?php echo $id;?>">
-											<?php echo $value;?>
-										</option>
-										<?php
-										}
-									?>
-								</select>
+								<input id="id_usuarios" name="id_usuarios" required class="form-control" placeholder="Num Cliente">
+								
 							</div>
 							<input type="password" name="password" class="form-control " id="password"
 							placeholder="Contraseña" required="" />
