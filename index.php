@@ -2,6 +2,6 @@
 if (isset($_COOKIE['id_usuarios'])) {
 }
 else{
-	header("location:/login/index.php");
+	header("location:login/index.php");
 }
 ?>
