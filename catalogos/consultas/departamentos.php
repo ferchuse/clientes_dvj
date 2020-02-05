@@ -1,12 +1,4 @@
 <?php
-	// $directorio = 'files';
-	// $ficheros1  = scandir($directorio);
-	// $ficheros2  = scandir($directorio, 1);
-	
-	// print_r($ficheros1);
-	// print_r($ficheros2);
-?>
-<?php
 	
 	include("../login/login_success.php");
 	include("../conexi.php");
@@ -37,17 +29,17 @@
 		
 		<title>Categorías</title>
 		
-		<?php include("../styles_carpetas.php"); ?>
+		<?php include("../styles.php"); ?>
 		
 	</head>
 	
 	<body>
 		
-		
+		<?php include("../menu.php"); ?>
 		
 		<section class="container">
 			<strong>
-				<h2>Catálogo de Productos</h2>
+				<h2>Categorías</h2>
 			</strong>
 			
 		</section>
@@ -56,12 +48,14 @@
 		<section class="container">
 			<table class="table table-striped">
 				<tr class="success">
+					<td><strong>Clave</strong></td>
 					<td><strong>Linea</strong></td>
 					<td><strong>Descripción</strong></td>
 					<td><strong>Descargar</strong></td>
 				</tr>
 				<?php foreach($departamentos AS $i=>$fila){	?>
 					<tr class="">
+						<td><?php echo $fila["id_departamentos"] ?></td> 
 						<td><?php echo $fila["clave"] ?></td> 
 						<td><?php echo $fila["nombre_departamentos"] ?></td> 
 						<td>
@@ -76,7 +70,6 @@
 				?>
 			</table>
 		</section>
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 		
-	</body>	
-</html>	
+		
+	</html>	
